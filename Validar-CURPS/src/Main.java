@@ -6,7 +6,7 @@ import java.util.regex.Matcher;
 
 public class Main {
 
-    private static final String curp_regex = "^[A-Z]{4}\\d{6}[HM][A-Z]{5}\\d{2}$";
+    private static final String regex = "^[A-Z]{4}\\d{6}[HM][A-Z]{5}\\d{2}$";
 
     public static void main(String[] args) {
         String filePath = "curps.txt";
@@ -24,7 +24,7 @@ public class Main {
     }
 
     private static void validarCURP(String curp, int numeroLinea) {
-        Pattern pattern = Pattern.compile(curp_regex);
+        Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(curp);
 
         if (matcher.matches()) {
